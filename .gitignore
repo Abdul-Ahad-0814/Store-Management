@@ -1,7 +1,4 @@
-# Ignore Qt build folders
-build/
-*.pro.user*
-*.pro.user
+
 
 # Ignore Qt Creator clangd cache
 .qtc_clangd/
