@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>products1</class>
+ <widget class="QDialog" name="products1">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1271</width>
+    <height>667</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 2px solid #1E90FF;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>110</y>
+     <width>321</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QWidget {
+    background-color: #F4F7FC;
+    color: #333;
+	border: 1px solid black 
+}
+</string>
+   </property>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+	border:none
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Product ID</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>30</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #F4F7FC;
+    border: 1px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>90</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+	border:none
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Product Name</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>80</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #F4F7FC;
+    border: 1px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>71</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+	border:none
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Quantity</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_3">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>130</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #F4F7FC;
+    border: 1px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_4">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>180</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #F4F7FC;
+    border: 1px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>190</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+	border:none
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Selling Price</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>240</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+	border:none
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Purchase Price</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_5">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>230</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+    background-color: #F4F7FC;
+    border: 1px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="submitbutton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>340</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color:rgb(47, 161, 15) ;
+	color: rgb(4, 218, 65);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Submit</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="capturebarcodebutton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>290</y>
+      <width>281</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color:rgb(30, 144, 255) ;
+	color: rgb(4, 218, 65);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Upload barcode </string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

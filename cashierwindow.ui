@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>cashierwindow</class>
+ <widget class="QDialog" name="cashierwindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1267</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 2px solid #1E90FF;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+</string>
+  </property>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>60</y>
+     <width>751</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    background-color: #F9FAFB;  /* Light background to contrast with blue */
+    border-radius: 12px;
+    border: 1px solid #E0E5EC;  /* Light gray border for a clean look */
+}
+
+QTableView QHeaderView::section {
+    background-color: #0066CC;  /* Darker blue for headers */
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 10px;
+}
+
+QTableView QHeaderView::section:checked {
+    background-color: #3399FF;  /* Lighter blue when selected */
+    color: white;
+    border-radius: 8px;
+}
+
+QScrollBar:vertical {
+    background-color: #F0F4F7;  /* Very light gray for the scrollbar track */
+    width: 12px;
+    border-radius: 8px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #0066CC;  /* Same blue as the header */
+    border-radius: 8px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QTableWidget::item {
+    background-color: #FFFFFF;  /* White background for items */
+    color: #333333;  /* Dark gray text for readability */
+    padding: 10px;
+    border-radius: 6px;
+}
+
+QTableWidget::item:hover {
+    background-color: #E8F2FF;  /* Light blue on hover */
+}
+
+QTableWidget::item:selected {
+    background-color: #0066CC;  /* Dark blue for selected items */
+    color: white;
+    border-radius: 6px;
+}
+
+QTableWidget::item:selected:focus {
+    outline: none;
+}
+
+QTableWidget::item:selected:active {
+    border-radius: 10px;
+}
+
+QTableWidget::item:selected:first {
+    border-top-left-radius: 10px;
+}
+
+QTableWidget::item:selected:last {
+    border-top-right-radius: 10px;
+}
+</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Sale price</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Quantity</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Discount rate</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>380</y>
+     <width>751</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    background-color: #F9FAFB;  /* Light background to contrast with blue */
+    border-radius: 12px;
+    border: 1px solid #E0E5EC;  /* Light gray border for a clean look */
+}
+
+QTableView QHeaderView::section {
+    background-color: #0066CC;  /* Darker blue for headers */
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 10px;
+}
+
+QTableView QHeaderView::section:checked {
+    background-color: #3399FF;  /* Lighter blue when selected */
+    color: white;
+    border-radius: 8px;
+}
+
+QScrollBar:vertical {
+    background-color: #F0F4F7;  /* Very light gray for the scrollbar track */
+    width: 12px;
+    border-radius: 8px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #0066CC;  /* Same blue as the header */
+    border-radius: 8px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QTableWidget::item {
+    background-color: #FFFFFF;  /* White background for items */
+    color: #333333;  /* Dark gray text for readability */
+    padding: 10px;
+    border-radius: 6px;
+}
+
+QTableWidget::item:hover {
+    background-color: #E8F2FF;  /* Light blue on hover */
+}
+
+QTableWidget::item:selected {
+    background-color: #0066CC;  /* Dark blue for selected items */
+    color: white;
+    border-radius: 6px;
+}
+
+QTableWidget::item:selected:focus {
+    outline: none;
+}
+
+QTableWidget::item:selected:active {
+    border-radius: 10px;
+}
+
+QTableWidget::item:selected:first {
+    border-top-left-radius: 10px;
+}
+
+QTableWidget::item:selected:last {
+    border-top-right-radius: 10px;
+}
+</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Sale price</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Quantity</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>discount</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>final price</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color:;
+	color: rgb(42, 36, 36);
+    font-size: 26px;
+    font-weight: bold;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Product Table</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>340</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color:;
+	color: rgb(42, 36, 36);
+    font-size: 26px;
+    font-weight: bold;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Cart Table</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>390</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: ;
+	color: rgb(38, 38, 38);
+    font-size: 20px;
+    font-weight: bold;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Sub Total</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>380</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: white;
+    border: 2px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>818</x>
+     <y>440</y>
+     <width>141</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: ;
+	color: rgb(38, 38, 38);
+    font-size: 20px;
+    font-weight: bold;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Total Discount </string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_2">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>430</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: white;
+    border: 2px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>490</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: ;
+	color: rgb(38, 38, 38);
+    font-size: 20px;
+    font-weight: bold;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Final Amount</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit_3">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>480</y>
+     <width>211</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLineEdit {
+    background-color: white;
+    border: 2px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 2px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>250</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color:rgb(47, 161, 15) ;
+	color: rgb(4, 218, 65);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 18px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Checkout</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_3">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>190</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 18px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Clear Cart</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_4">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>540</y>
+     <width>391</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color:rgb(30, 144, 255) ;
+	color: rgb(4, 218, 65);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Print receipt</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_5">
+   <property name="geometry">
+    <rect>
+     <x>820</x>
+     <y>590</y>
+     <width>391</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: rgb(195, 25, 25);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Log out</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>830</x>
+     <y>130</y>
+     <width>381</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 18px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Add To Cart</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_6">
+   <property name="geometry">
+    <rect>
+     <x>840</x>
+     <y>60</y>
+     <width>371</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color:;
+	color: rgb(42, 36, 36);
+    font-size: 26px;
+    font-weight: bold;
+}
+</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>label_2</zorder>
+  <zorder>label_3</zorder>
+  <zorder>lineEdit</zorder>
+  <zorder>label_4</zorder>
+  <zorder>lineEdit_2</zorder>
+  <zorder>label_5</zorder>
+  <zorder>lineEdit_3</zorder>
+  <zorder>pushButton_2</zorder>
+  <zorder>pushButton_3</zorder>
+  <zorder>pushButton_4</zorder>
+  <zorder>pushButton_5</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>tableWidget</zorder>
+  <zorder>tableWidget_2</zorder>
+  <zorder>label_6</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

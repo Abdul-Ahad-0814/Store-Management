@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginWindow</class>
+ <widget class="QMainWindow" name="LoginWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1271</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+    background-color: #FFFFFF;
+    border: 2px solid #1E90FF;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="widget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>130</y>
+      <width>942</width>
+      <height>363</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QWidget {
+    background-color: #F4F7FC;
+    color: #333;
+}
+</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>80</y>
+       <width>301</width>
+       <height>71</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: #1E90FF;
+    font-size: 64px;
+    font-weight: bold;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Welcome!</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>160</y>
+       <width>141</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: black;
+font-weight: bold;
+font-size: 38px;
+font-weight: regular;</string>
+     </property>
+     <property name="text">
+      <string>You Are</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>240</y>
+       <width>91</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton {
+    font-size: 18px;
+    color: #333;
+	outline:none;
+	border:none;
+}
+
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: rgb(30, 144, 255);
+    border-radius: 8px;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: #C5D1E0;
+    border-radius: 8px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Admin</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radioButton_2">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>270</y>
+       <width>101</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton {
+    font-size: 18px;
+    color: #333;
+	outline:none;
+	border:none;
+}
+
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+}
+
+QRadioButton::indicator:checked {
+    background-color: rgb(30, 144, 255);
+    border-radius: 8px;
+}
+
+QRadioButton::indicator:unchecked {
+    background-color: #C5D1E0;
+    border-radius: 8px;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Cashier</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>610</x>
+       <y>60</y>
+       <width>231</width>
+       <height>101</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLabel {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Login / SignUp</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>150</y>
+       <width>371</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: #F4F7FC;
+    border: 1px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string comment="Email Id">Email ID</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>190</y>
+       <width>371</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    background-color: #F4F7FC;
+    border: 1px solid #C5D1E0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+QLineEdit:focus {
+    border: 1px solid #1E90FF;
+    background-color: #FFFFFF;
+}
+</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string comment="Password">Password</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>240</y>
+       <width>371</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color:rgb(30, 144, 255) ;
+	color: rgb(4, 218, 65);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: rgb(20, 96, 167);;
+	cursor: pointer;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>290</y>
+       <width>371</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton {
+    background-color: white ;
+	color: black;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: rgb(38, 38, 38);
+	color: white;
+	cursor:pointer;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>Register</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

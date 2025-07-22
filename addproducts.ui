@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Addproducts</class>
+ <widget class="QDialog" name="Addproducts">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1271</width>
+    <height>661</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QDialog {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 2px solid #1E90FF;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+</string>
+  </property>
+  <widget class="QTableWidget" name="allItem">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>70</y>
+     <width>751</width>
+     <height>450</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    background-color: #F9FAFB;  /* Light background to contrast with blue */
+    border-radius: 12px;
+    border: 1px solid #E0E5EC;  /* Light gray border for a clean look */
+}
+QTableView QHeaderView::section {
+    background-color: #0066CC;  /* Darker blue for headers */
+    color: white;
+	
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin:0px 0px;
+    padding: 10px;
+	font-weight:bold;
+}
+
+QTableView QHeaderView::section:checked {
+    background-color: #3399FF;  /* Lighter blue when selected */
+    color: white;
+    border-radius: 8px;
+}
+
+QScrollBar:vertical {
+    background-color: #F0F4F7;  /* Very light gray for the scrollbar track */
+    width: 12px;
+    border-radius: 8px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #0066CC;  /* Same blue as the header */
+    border-radius: 8px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QTableWidget::item {
+    background-color: #FFFFFF;  /* White background for items */
+    color: #333333;  /* Dark gray text for readability */
+    padding: 10px;
+    border-radius: 6px;
+}
+
+QTableWidget::item:hover {
+    background-color: #E8F2FF;  /* Light blue on hover */
+}
+
+QTableWidget::item:selected {
+    background-color: #0066CC;  /* Dark blue for selected items */
+    color: white;
+    border-radius: 6px;
+}
+
+QTableWidget::item:selected:focus {
+    outline: none;
+}
+
+QTableWidget::item:selected:active {
+    border-radius: 10px;
+}
+
+QTableWidget::item:selected:first {
+    border-top-left-radius: 10px;
+}
+
+QTableWidget::item:selected:last {
+    border-top-right-radius: 10px;
+}
+</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>ID</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Quantity</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Selliing Price</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Purchase price</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Discount rate</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>30</y>
+     <width>291</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color:;
+	color: rgb(42, 36, 36);
+    font-size: 26px;
+    font-weight: bold;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Inventory Products</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>540</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Add product</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="update">
+   <property name="geometry">
+    <rect>
+     <x>370</x>
+     <y>540</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Update </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_2">
+   <property name="geometry">
+    <rect>
+     <x>690</x>
+     <y>540</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="discount">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>540</y>
+     <width>151</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Apply Discount</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="discount_2">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>540</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Add Cashiers</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>60</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel {
+    color: ;
+	color: rgb(42, 36, 36);
+    font-size: 24px;
+    font-weight: bold;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Cashier Panel</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="cashier">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>100</y>
+     <width>251</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QTableWidget {
+    background-color: #F9FAFB;  /* Light background to contrast with blue */
+    border-radius: 12px;
+    border: 1px solid #E0E5EC;  /* Light gray border for a clean look */
+}
+QTableView QHeaderView::section {
+    background-color: #0066CC;  /* Darker blue for headers */
+    color: white;
+	
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin:0px 0px;
+    padding: 10px;
+	font-weight:bold;
+}
+
+QTableView QHeaderView::section:checked {
+    background-color: #3399FF;  /* Lighter blue when selected */
+    color: white;
+    border-radius: 8px;
+}
+
+QScrollBar:vertical {
+    background-color: #F0F4F7;  /* Very light gray for the scrollbar track */
+    width: 12px;
+    border-radius: 8px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #0066CC;  /* Same blue as the header */
+    border-radius: 8px;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QTableWidget::item {
+    background-color: #FFFFFF;  /* White background for items */
+    color: #333333;  /* Dark gray text for readability */
+    padding: 10px;
+    border-radius: 6px;
+}
+
+QTableWidget::item:hover {
+    background-color: #E8F2FF;  /* Light blue on hover */
+}
+
+QTableWidget::item:selected {
+    background-color: #0066CC;  /* Dark blue for selected items */
+    color: white;
+    border-radius: 6px;
+}
+
+QTableWidget::item:selected:focus {
+    outline: none;
+}
+
+QTableWidget::item:selected:active {
+    border-radius: 10px;
+}
+
+QTableWidget::item:selected:first {
+    border-top-left-radius: 10px;
+}
+
+QTableWidget::item:selected:last {
+    border-top-right-radius: 10px;
+}
+</string>
+   </property>
+   <column>
+    <property name="text">
+     <string>Name</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Password</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>490</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color:rgb(47, 161, 15) ;
+	color: rgb(4, 218, 65);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Generate Report</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="update_cashier">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>440</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Update</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="delete_cashier">
+   <property name="geometry">
+    <rect>
+     <x>1030</x>
+     <y>440</y>
+     <width>121</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: #1E90FF;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="logout">
+   <property name="geometry">
+    <rect>
+     <x>900</x>
+     <y>540</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: rgb(195, 25, 25);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 8px 16px;
+    font-size: 14px;
+	font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #4682B4;
+}
+
+QPushButton:pressed {
+    background-color: #4169E1;
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Log out</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
