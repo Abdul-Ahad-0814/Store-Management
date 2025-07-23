@@ -40,8 +40,6 @@ If you're not compiling the project and just want to run the ready-to-use `.exe`
    - Register an admin account
    - Then log in as admin to access full features
 
-> ⚠️ Ensure your system has Qt & OpenCV runtime DLLs available (either installed or in the same folder as the `.exe`)
-
 ---
 
 ## 🧱 Build from Source (Optional)
